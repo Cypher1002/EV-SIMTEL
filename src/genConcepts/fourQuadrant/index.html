@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLE LEARNING</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;width: 100%;margin: 0;background: white;padding: 1em 0;">Four Quadrant Regenerative Charging</h3>
+        <hr style="width: 100%; margin: 0;">
+        <div class="topics-display">
+            <img src="img/4qps.png" alt="gateFiringCircuit" style="max-width: 70%;">
+            <div class="theory-window">
+                <h2>Four Quadrant Operation of DC Motor</h2>
+                <p>Four Quadrant Operation of any drives or DC Motor means that the machine operates in four quadrants. They are Forward Braking, Forward motoring, Reverse motoring and Reversebraking. A motor operates in two modes – Motoring and Braking. A motor drive capable ofoperating in both directions of rotation and of producing both motoring and regeneration is calleda Four Quadrant variable speed drive.<br><br>In motoring mode, the machine works as a motor and converts the electrical energy into mechanical energy, supporting its motion. In braking mode, the machine works as a generator and converts mechanical energy into electrical energy and as a result, it opposes the motion. The Motor can work in both, forward and reverse directions, i.e., in motoring and braking operations. The product of angular speed and torque is equal to the power developed by a motor. For the multi-quadrant operation of drives, the following conventions about the signs of torque and speed are used. When the motor is rotated in the forward direction the speed of the motor is considered positive. The drives which operate only in one direction, forward speed will be their normal speed.<br><br>In loads involving up and down motions, the speed of the motor which causes upward motion isconsidered to be in forward motion. For reversible drives, forward speed is chosen arbitrarily.The rotation in the opposite direction gives reverse speed which is denoted by a negative sign.The rate of change of speed positively in the forward direction or the torque which providesacceleration is known as Positive motor torque. In the case of retardation, the motor torque isconsidered negative. Load torque is opposite to the positive motor torque in the direction.</p>
+                <img style="width: 80%;" src="img/graph-4qps.jpg" alt="">
+                <p>In the I quadrant power developed is positive and the machine is working as a motor supplying mechanical energy. The I (first) quadrant operation is called Forward Motoring. II (second) quadrant operation is known as Braking. In this quadrant, the direction of rotation is positive, and the torque is negative, and thus, the machine operates as a generator developing a negative torque, which opposes the motion.<br><br> The kinetic energy of the rotating parts is available as electrical energy which may be supplied back to the mains. In dynamic braking, the energy is dissipated in the resistance. The III (third) quadrant operation is known as the reverse motoring. The motor works, in the reverse direction. Both the speed and the torque have negative values while the power is positive.<br><br> In the IV (fourth) quadrant, the torque is positive, and the speed is negative. This quadrant corresponds to the braking in the reverse motoring mode.</p>
+                <h3>Operation of hoist in four quadrants:</h3>
+
+            </div>
+          <!-- SIMULATION under development -->
+          <!-- <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/basicFiringCircuitforSCR.pdf")'>Theory</button>   
+            <button class="viewSimulation" onclick='startSimulation("simulations/resistanceFiring/index.html")'>Simulation</button>
+          </div> -->
+        </div>
+      </div> 
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

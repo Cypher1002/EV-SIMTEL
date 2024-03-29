@@ -10,10 +10,10 @@ body {
 
 .app {
     display: flex;
-    width: calc(100%-20px);
+    width: calc(100% - 20px);
     justify-content: space-around;
     align-items: center;
-    height: calc(100%-20px);
+    height: calc(100% - 20px);
     margin: 20px;
 }
 
