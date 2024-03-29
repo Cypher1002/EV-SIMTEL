@@ -19,14 +19,14 @@ function generateChartData(sliderVal) {
   // });
 
   chart2data = Array.from({ length: numPoints }, (_, i) => {
-    const xValue = i * (piCycle * Math.PI) / (numPoints - 1);
+    const xValue = (i * (piCycle * Math.PI) / (numPoints - 1)) - (sliderVal * 0.01 * Math.PI);
     const isOddCycle = Math.floor(xValue / Math.PI) % 2 === 0;
-
-    if (isOddCycle) {
-      return Math.sin(xValue);
-
+    const positionInCycle = xValue % Math.PI;
+    
+    if (isOddCycle && positionInCycle > 0 && positionInCycle < (0.10 * Math.PI)) {
+        return 0.8;
     } else {
-      return 0;
+        return 0;
     }
   });
 
