@@ -49,7 +49,7 @@
           <p><b>(2)Controlled Rectifier (Thyristorized Rectifier):</b> It uses SCRs and DC output voltage is variable in amplitude. By controlling the firing angle the output DC voltage (after conversion) can be varied.</p>
           <img src="../assets/img/RectifierSystem.png" alt="Rectifier" style="max-width: 80%;">
           <div class="actionContainer">
-            <button class="viewPdf" onclick='loadPdf("../assets/IntroductionOfRectifier.pdf")'>View PDF</button> 
+              
           </div>
         </div>
       </div>
@@ -112,13 +112,23 @@
           <p style="display: none; flex-direction: column"><img src="../assets/img/UncFullWaveRect.png" alt="gateFiringCircuit"></p>
           <p style="display: none; flex-direction: column"><img src="../assets/img/UncBridgeRect.png" alt="gateFiringCircuit"></p>
           <div class="actionContainer" style="display: none;">
+         <!-- changes  -->
             <button class="viewPdf" onclick='loadPdf("../assets/Un_HalfWaveRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_half/index.html")'>Simulation</button>
+            <!-- change -->
           </div>
           <div class="actionContainer" style="display: none;">
+            <!-- changes -->
             <button class="viewPdf" onclick='loadPdf("../assets/Un_FullWaveRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_full/index.html")'>Simulation</button>
+         
+            <!-- chnages -->
           </div>
           <div class="actionContainer" style="display: none;">
+            <!-- changes -->
             <button class="viewPdf" onclick='loadPdf("../assets/Un_BridgeRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_bridge/index.html")'>Simulation</button>
+            <!-- changes -->
           </div>
         </div>
       </div>
@@ -144,15 +154,19 @@
             
             <div class="actionContainer" style="display: none;">
               <button class="viewPdf" onclick='loadPdf("../assets/Triangular_firing_scheme.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/Triangular_comparator/index.html")'>Simulation</button>
             </div>
             <div class="actionContainer" style="display: none;">
               <button class="viewPdf" onclick='loadPdf("../assets/RampComparatorFiringCircuit.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/ramp_comparator/index.html")'>Simulation</button>
             </div>
             <div class="actionContainer" style="display: none;">
               <button class="viewPdf" onclick='loadPdf("../assets/Cosine_Firing_Scheme.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/cosine_firing/index.html")'>Simulation</button>
             </div>
             <div class="actionContainer" style="display: none;">
               <button class="viewPdf" onclick='loadPdf("../assets/IC-TCA785.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/IC-TCA/index.html")'>Simulation</button>
             </div>
           </div>
       </div>
