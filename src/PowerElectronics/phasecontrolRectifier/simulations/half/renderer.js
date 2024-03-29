@@ -2,7 +2,7 @@ let chart1, chart2, chart3, chart4, chart5;
 let chart1data = [], chart2data = [], chart3data = [], chart4data = [], chart5data = [];
 let sliderVal;
 let numPoints;
-let piCycle = 4; // Default value, you can change this as needed
+let piCycle = 6; // Default value, you can change this as needed
 
 function generateChartData(sliderVal) {
   const amplitude = Math.sin(sliderVal * Math.PI / 100);
@@ -12,12 +12,19 @@ function generateChartData(sliderVal) {
     return Math.sin(xValue);
   });
 
+  // chart2data = Array.from({ length: numPoints }, (_, i) => {
+  //   const xValue = (i * (piCycle * Math.PI) / (numPoints - 1)) + (sliderVal * 0.01 * Math.PI);
+  //   const positionInCycle = xValue % Math.PI;
+  //   return 0.5 - (positionInCycle / (Math.PI * 0.2));
+  // });
+
   chart2data = Array.from({ length: numPoints }, (_, i) => {
     const xValue = i * (piCycle * Math.PI) / (numPoints - 1);
     const isOddCycle = Math.floor(xValue / Math.PI) % 2 === 0;
 
     if (isOddCycle) {
       return Math.sin(xValue);
+
     } else {
       return 0;
     }
@@ -237,5 +244,17 @@ document.addEventListener('DOMContentLoaded', function () {
   let chartCanvas = [chartCanvas1, chartCanvas2, chartCanvas3, chartCanvas4, chartCanvas5];
   generateChartData(0);
   updateChart(chartCanvas);
+  slider.addEventListener('input', () => {
+    sliderVal = parseInt(slider.value);
+    sliderValue.innerText = 180 - parseInt(sliderVal * 0.01 * 180);
 
+    generateChartData(sliderVal);
+    chart1.destroy();
+    chart2.destroy();
+    chart3.destroy();
+    chart4.destroy();
+    chart5.destroy();
+
+    updateChart(chartCanvas);
+  });
 });

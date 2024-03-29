@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
   numPoints = chartCanvas1.width;
 
   let chartCanvas = [chartCanvas1, chartCanvas2, chartCanvas3, chartCanvas4, chartCanvas5];
-  generateChartData(sliderVal);
+  generateChartData(0);
   updateChart(chartCanvas);
   slider.addEventListener('input', () => {
     sliderVal = parseInt(slider.value);
