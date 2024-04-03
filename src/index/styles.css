@@ -1,12 +1,16 @@
 
 #left-menu{
-  width: 30%;
+  width: AUTO;
   background: white;
   margin: 25px;
   border: 2px solid black;
   border-radius: 14px;
   padding: 15px;
   padding-top: 0;
+}
+
+#center-toc{
+  text-align: center;
 }
 
 #left-menu h3{
