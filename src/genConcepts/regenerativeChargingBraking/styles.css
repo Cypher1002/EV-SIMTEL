@@ -1,343 +1,36 @@
-<<<<<<< HEAD
-.svgOverlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.lines {
-  stroke-width: 2;
-  stroke: #000;
-  z-index: 2;
-}
-
-.svgLabels{
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#left-column {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 10px 25px;
-  height: 100%;
-  align-items: center;
-  z-index: 1;
-}
-
-.powerSupply-box {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  align-items: center;
-  padding: 20px;
-  border: 2px solid #000;
-  border-radius: 12px;
-  height: 80px;
-  margin: 50px 0 35px 0px;
-  width: 165px;
-  z-index: 1;
-}
-
-#speedControl {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  border: 2px solid #000;
-  border-radius: 12px;
-  height: 320px;
-  margin: 5px 0px;
-  width: 200px;
-  z-index: 1;
-}
-
-.speedControlLabel {
-  font-weight: bold;
-}
-
-.percetangeBox{
-  border: 2px solid #000;
-  padding: 10px;
-  border-radius: 6px;
-  width: 65px;
-  text-align: center;
-}
-
-#knobPercentage{
-  margin: 0;
-}
-
-.knob-img {
-  width: 120px;
-}
-
-
-#center-column {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 10px 25px 10px 65px;
-  height: 100%;
-  align-items: center;
-}
-
-
-#center-column div p{
-  text-align: center;
-  font-weight: bold;
-}
-
-.toggle-img{
-  width: 65px;
-  height: 100px;
-  rotate: -90deg;
-}
-
-#switchLabel{
-  font-size: 14px;
-  width: 25%;
-}
-
-#switch-box{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  width: 290px;
-  height: 170px;
-  
-}
-
-
-#switchCircuit-box{
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 10px;
-  margin: 10px 0 0 0;
-  height: 50px;
-  z-index: 0;
-}
-
-#switchCircuitLabel {
-  font-size: 14px;
-  margin: 0;
-}
-
-#current-box {
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 10px;
-  margin: 22px 0;
-  color: black;
-  z-index: 1;
-}
-
-#currentLabel, #voltageLabel{
-  font-weight: bold;
-  margin: 0;
-}
-
-#voltage-box {
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 10px;
-  margin: 20px 0;
-  color: black;
-}
-
-.tire-img{
-  width: 265px;
-  margin: 0 0 10px 0;
-}
-
-#motor-box {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  width: 45%;
-  height: 350px;
-  justify-content: center;
-  align-items: center;
-}
-
-.motorLabel {
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.rpm-container{
-  border: 2px solid #000;
-  padding: 10px;
-  border-radius: 6px;
-  width: 65px;
-  text-align: center;
-}
-
-#rpm{
-  margin: 0;
-}
-
-@keyframes rotateTire {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.rotating {
-  animation: rotateTire 1s linear infinite;
-}
-
-#circuitMotor {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  width: 205px;
-  height: 205px;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-}
-
-.motor-img{
-  width: 165px;
-  margin: 0 0 10px 0;
-}
-
-#right-column {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  height: 585px;
-  margin: 10px 10px 10px 0;
-  width: 100%;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-#powerButton {
-  font-size: 18px;
-  padding: 10px 20px;
-  background: white;
-  border: 2px solid red;
-  color: red;
-  border-radius: 8px;
-  box-shadow: 4px 2px 7px black;
-
-}
-
-#battery-parameters {
-  display: flex;
-  background-color: white;
-  border: 2px solid #000;
-  border-radius: 12px;
-  width: 640px;
-  padding: 15px;
-}
-
-.light-img {
-  width: 50px;
-  height: auto;
-  display: block;
-  margin: auto -5px;
-  rotate: 90deg;
-}
-
-#lightImgOn{
-  position: absolute;
-  opacity: 0;
-}
-
-.light {
-  display: flex;
-  background: white;
-  text-align: center;
-  width: 85px;
-  height: 85px;
-  border: 2px solid;
-  color: black;
-  border-radius: 50%;
-}
-
-
-.chart-container {
-  width: 33%;
-  height: 180px;
-  flex: 2;
-}
-#voltage-chart{
-  height: 200px;
-}
-
-#load-section{
-  height: 360px;
-  width: 100%;
-  /* border: 2px solid #000; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.loads{
-  display: flex;
-  width: 35%;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 65px;
-=======
-
 
 a{
     text-decoration: none;
     color: black;
 }
-
+ 
 b{
     display: contents;
 }
-
+ 
 .app{
     display: flex;
     height: 100%;
 }
-
+ 
 .main-panel{
     width: 100%;
 }
-
+ 
 .topicContent{
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+ 
 .contentWrapper {
     height: 60%;
     margin: 50px 100px;
     font-size: 20px;
 }
-
-
+ 
+ 
 .topics-display{
     width: 80%;
     height: 75%;
@@ -346,7 +39,7 @@ b{
     align-items: center;
     gap: 40px;
 }
-
+ 
 .topics-display img{
     background: white;
     margin: 20px auto;
@@ -355,7 +48,7 @@ b{
     border-radius: 12px;
     padding: 10px;
 }
-
+ 
 .theory-window {
     background: white;
     padding: 20px;
@@ -367,21 +60,21 @@ b{
     display: flex;
     flex-direction: column;
 }
-
+ 
 .theory-window table {
     margin: 0 auto;
     border-collapse: collapse;
 }
-  
+ 
 .theory-window table th,.theory-window table td {
     border: 1px solid black;
     padding: 8px;
 }
-
+ 
 .topics-display button {
     width: 100px;
 }
-
+ 
 #pdfContent {
     display: none;
     position: absolute;
@@ -391,7 +84,7 @@ b{
     width: 100%;
     height: 100%;
 }
-
+ 
 #exit-pdf{
     position: relative;
     top: 15px;
@@ -404,12 +97,12 @@ b{
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-
+ 
 #exit-pdf:hover, #exit-sim:hover {
     filter: invert(1);
     border: 2px solid white;
 }
-
+ 
 .viewPdf{
     position: absolute;
     bottom: 15px;
@@ -422,7 +115,7 @@ b{
     cursor: pointer;
     margin-left: inherit;
 }
-
+ 
 .viewSimulation{
     position: absolute;
     bottom: 15px;
@@ -436,7 +129,7 @@ b{
     left: 130px;
     margin-left: auto;
 }
-
+ 
 #pdf-viewer {
     width: 60%;
     height: 90%;
@@ -446,12 +139,12 @@ b{
     overflow-y:auto;
     flex-direction: column;
 }
-  
+ 
 #pdf-viewer canvas {
     display: block;
     border: 1px solid black;
 }
-
+ 
 #simulation-frame{
     display: none;
     position: absolute;
@@ -461,12 +154,12 @@ b{
     width: 100%;
     height: 100%;       
 }
-
+ 
 iframe {
     width: 100%;
     height: 100%;
 }
-
+ 
 .actionContainer{
     width: 100%;
     display: flex;
@@ -475,7 +168,7 @@ iframe {
     margin-left: 20px;
     bottom: 15px;
 }
-
+ 
 #exit-sim {
     position: absolute;
     top: 15px;
@@ -487,5 +180,4 @@ iframe {
     border: 2px solid black;
     cursor: pointer;
     transition: 0.2s ease-in-out;
->>>>>>> fa62b5152a26f816d085c17bebb7bd3c80055358
 }
