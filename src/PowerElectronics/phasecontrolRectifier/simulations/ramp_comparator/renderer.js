@@ -1,15 +1,18 @@
-let chart1, chart2, chart3, chart4, chart5;
-let chart1data = [], chart2data = [], chart3data = [], chart4data = [], chart5data = [];
+let chart1, chart2, chart3, chart4, chart5, chart6, chart7, chart8;
+let chart1data = [], chart2data = [], chart3data = [], chart4data = [], chart5data = [], chart6data = [], chart7data = [] ,chart8data =[];
 let sliderVal;
 let numPoints;
+let piCycle = 6; // Default value, you can change this as needed
 
 function generateChartData(sliderVal) {
-  const amplitude = Math.sin(sliderVal * Math.PI / 100);
+  const amplitude = Math.sin(sliderVal * Math.PI / 100)
+
   
   chart1data = Array.from({ length: numPoints }, (_, i) => {
-    const xValue = i * (6 * Math.PI) / (numPoints - 1);
-    return Math.sin(xValue)
+    const xValue = i * (piCycle * Math.PI) / (numPoints - 1);
+    return Math.sin(xValue);
   });
+
 
   chart2data = Array.from({ length: numPoints }, (_, i) => {
     const xValue = i * (6 * Math.PI) / (numPoints - 1);
@@ -31,11 +34,12 @@ function generateChartData(sliderVal) {
   });
 
   chart4data = Array.from({ length: numPoints }, (_, i) => {
-    const xValue = i * (6 * Math.PI) / (numPoints - 1);
-    const isOddCycle = Math.floor(xValue / Math.PI) % 2 === 0;
+    const xValue = i * (0.5* Math.PI) / (numPoints );
+    const isOddCycle = Math.floor(xValue / Math.PI) % 2 
+    == 0;
     const positionInCycle = xValue % Math.PI;
     
-    if (isOddCycle && (1 - ((positionInCycle % (Math.PI/3)) / (Math.PI/3) ) > Math.max(0, sliderVal * 0.01))) {
+    if (isOddCycle &&  ((positionInCycle % (Math.PI/5  )) / (Math.PI) ) > Math.max(0, sliderVal * 0.01)) {
         return 1;
     } else {
         return 0;
@@ -43,24 +47,32 @@ function generateChartData(sliderVal) {
   });
 
   chart5data = Array.from({ length: numPoints }, (_, i) => {
-    const xValue = i * (6 * Math.PI) / (numPoints - 1);
-    const isOddCycle = Math.floor(xValue / Math.PI) % 2 === 0;
-    const positionInCycle = xValue % Math.PI;
-    
-    if (isOddCycle && (sliderVal < 50 || 1 - (positionInCycle / Math.PI) < Math.max(0, sliderVal * 0.01))) {
-        return sliderVal > 50 ? 0 : Math.sin(xValue);
-    } else {
-        return Math.sin(xValue);
-    }
+    const xValue = (i * (piCycle * Math.PI) / (numPoints )) - (sliderVal * 0.01 * Math.PI-Math.PI);
+  const positionInCycle =  (xValue % Math.PI)-3;
+  const isOddCycle = Math.floor(xValue / Math.PI) % 2 === 0;
+  if (isOddCycle && positionInCycle > 0 ) {
+    return 0.5 - (positionInCycle / (Math.PI * 0.5));
+} else {
+    return 0;
+}
   });
 }
 
 function updateChart(chartCanvas) {
-  let chartColors = ['rgba(153, 102, 255, 1)', 'rgba(0, 123, 255, 1)', 'rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 153, 0, 1)']
+  let chartColors = [
+    'rgba(153, 102, 255, 1)', 
+    'rgba(0, 123, 255, 1)', 
+    'rgba(255, 99, 132, 1)', 
+    'rgba(75, 192, 192, 1)',
+    'rgba(200, 153, 0, 1)',
+    'rgba(204, 0, 204, 1)',    // Added: Purple
+    'rgba(0, 204, 102, 1)',
+    'rgba(0, 123, 255, 1)'    
+  ];
   const options = {
     plugins: {
       legend: {
-          display: false
+        display: false
       }
     },
     animation: false,
@@ -69,75 +81,60 @@ function updateChart(chartCanvas) {
         type: 'linear',
         position: 'bottom',
         min: 0,
-        max: 6 * Math.PI,
+        max: piCycle * Math.PI,
+        ticks: {
+          stepSize: Math.PI,
+          callback: function (value, index, values) {
+            return index + 'π';
+          }
+        }
       },
       y: {
-        display: false,
+        display: true,
         type: 'linear',
         position: 'left',
         min: -0.01,
-        max: 1.2,
-      },
-      
+        max: 1
+      }
     },
     maintainAspectRatio: false,
     elements: {
-      point:{
-          radius: 0
+      point: {
+        radius: 0
       },
       line: {
-          tension: 0.5
+        tension: 0.5
       }
-    },
-  }
-  
+    }
+  };
+
   const chart1Ctx = chartCanvas[0].getContext('2d');
   chart1 = new Chart(chart1Ctx, {
     type: 'line',
     data: {
-      labels: Array.from({ length: numPoints }, (_, i) => i * (6 * Math.PI) / (numPoints - 1)),
-      datasets: [{
-        data: chart1data,
-        borderWidth: 2,
-        borderColor: chartColors[0],
-        fill: false,
-      }]
+      labels: Array.from({ length: numPoints }, (_, i) => i * (piCycle * Math.PI) / (numPoints - 1)),
+      datasets: [
+        {
+          data: chart1data,
+          borderWidth: 2,
+          borderColor: chartColors[0],
+          fill: false
+        }
+      ]
     },
     options: {
-      plugins: {
-        legend: {
-            display: false
-        }
-      },
-      animation: false,
+      ...options,
       scales: {
-        x: {
-          type: 'linear',
-          position: 'bottom',
-          min: 0,
-          max: 6 * Math.PI,
-        },
+        ...options.scales,
         y: {
-          display: false,
-          type: 'linear',
-          position: 'left',
-          min: -1.2,
-          max: 1.2,
-        },
-        
-      },
-      maintainAspectRatio: false,
-      elements: {
-        point:{
-            radius: 0
-        },
-        line: {
-            tension: 0.5
+          ...options.scales.y,
+          min: -1,
+          max: 1
         }
-      },
-    },
+      }
+    }
   });
-
+  
   const chart2Ctx = chartCanvas[1].getContext('2d');
   chart2 = new Chart(chart2Ctx, {
     type: 'line',
