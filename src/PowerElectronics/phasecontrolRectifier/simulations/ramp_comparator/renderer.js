@@ -194,7 +194,6 @@ function updateChart(chartCanvas) {
     },
     options: options,
   });
-
 }
 
 document.addEventListener('DOMContentLoaded', function () {

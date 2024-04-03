@@ -43,7 +43,11 @@ b{
 
 .topics-display img{
     background: white;
+<<<<<<< HEAD
     margin: 0 auto;
+=======
+    margin: 20px auto;
+>>>>>>> fa62b5152a26f816d085c17bebb7bd3c80055358
     height: 80%;
     border: 2px solid black;
     border-radius: 12px;

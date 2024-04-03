@@ -126,7 +126,7 @@ function updateChart(chartCanvas) {
     },
   };
 
-  const createChart = (ctx, data, color) => {
+  const createChart = (ctx, data, color, title) => {
     return new Chart(ctx, {
       type: 'line',
       data: {
@@ -138,15 +138,27 @@ function updateChart(chartCanvas) {
           fill: false,
         }]
       },
-      options: options,
+      options: {
+        ...options,
+        scales: {
+          ...options.scales,
+          y: {
+            ...options.scales.y,
+            title: {
+              display: true,
+              text: title
+            }
+          }
+        }
+      }
     });
   };
 
-  chart1 = createChart(chartCanvas[0].getContext('2d'), chart1data, chartColors[0]);
-  chart2 = createChart(chartCanvas[1].getContext('2d'), chart2data, chartColors[1]);
-  chart3 = createChart(chartCanvas[2].getContext('2d'), chart3data, chartColors[2]);
-  chart4 = createChart(chartCanvas[3].getContext('2d'), chart4data, chartColors[3]);
-  chart5 = createChart(chartCanvas[4].getContext('2d'), chart5data, chartColors[4]);
+  chart1 = createChart(chartCanvas[0].getContext('2d'), chart1data, chartColors[0], 'Vs');
+  chart2 = createChart(chartCanvas[1].getContext('2d'), chart2data, chartColors[1], 'Vg');
+  chart3 = createChart(chartCanvas[2].getContext('2d'), chart3data, chartColors[2], 'Vo');
+  chart4 = createChart(chartCanvas[3].getContext('2d'), chart4data, chartColors[3], 'Io');
+  chart5 = createChart(chartCanvas[4].getContext('2d'), chart5data, chartColors[4], 'Vt');
 }
 
 document.addEventListener('DOMContentLoaded', function () {

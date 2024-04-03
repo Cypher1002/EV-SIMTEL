@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
   <title>NVIS425R</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="styles.css">
@@ -115,6 +116,123 @@
       </div>
     </div>
   </div>
+=======
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLE LEARNING</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;width: 100%;margin: 0;background: white;padding: 1em 0;">Regenerative Charging & Braking System</h3>
+        <hr style="width: 100%; margin: 0;">
+        <div class="topics-display">
+            <img src="img/regen.webp" alt="gateFiringCircuit" style="max-width: 40%;">
+            <div class="theory-window">
+                <h2>DC Motor:</h2>
+                <p>The principle of conversion of electrical energy into mechanical energy by electromagnetic means was demonstrated by the British scientist Michael Faraday in 1821 and consisted of a free-hanging wire dipping into a pool of mercury. A permanent magnet was placed in the middle of the pool of mercury. When a current was passed through the wire, the wire rotated around the magnet, showing that the current gave rise to a circular magnetic field around the wire. The DC motor are very useful where wide range of speed and good speed regulation is required such as electric traction.</p>    
+                <img style="max-width: 60%;" src="img/dcmotor.jpg" alt="">
+                <h3>Selection of DC Motor:</h3>
+                <p>Choosing DC motor and associated equipment for a given application requires consideration of several factors.</p>
+                <h4>Speed Range :</h4>
+                <p>If field control is to be used, and a large speed range is required, the base speed must be proportionately lower and the motor size must be larger. If speed range is much over 3:1, armature voltage control should be considered for at least part of the range. Very wide dynamic speed range can be obtained with armature voltage control. However, below about 60% of base speed, the motor should be DC rated or used for only short periods.</p>
+                <h4>Speed Variation with Torque :</h4>
+                <p>Applications requiring constant speed at all torque demands should use a shunt- wound DC motor. If speed change with load must be minimized, a DC motor regulator, such as one employing feedback from a tachometer, must be used. When the DC motor speed must decrease as the load increases, compound or series-wound DC motors may be used or a DC motor power supply with a drooping volt-ampere curve could be used with a shunt-wound DC motor.</p>
+                <h4>-- Reversing :</h4>
+                <p>This operation affects power supply and control, and may affect the DC motor's brush adjustment, if the DC motor cannot be stopped for switching before reverse operation. In this case, compound and stabilizing DC motor windings should not be used, and a suitable armature-voltage control system should supply power to the DC motor.</p>
+                <h4>-- Duty Cycle :</h4>
+                <p>Direct current motors are seldom used on drives that run continuously at one speed and load. Motor size needed may be determined by either the peak torque requirement or heating.</p>
+                <h4>-- Peak torque :</h4>
+                <p>The peak torque that a DC motor delivers is limited by that load at which damaging commutation begins. DC motor brush and commutator damage depends on sparking severity and duration. Therefore, the DC motor's peak torque depends on the duration and frequency of occurrence of the overload. DC motor peak torque is often limited by the maximum current that the power supply can deliver.<br><br>DC motors can commutate greater loads at low speed without damage. NEMA standards specify that machines powered by DC motors must deliver at least 150% rated current for 1 minute at any speed within rated range, but most DC motors do much better.</p>
+                <h4>-- Heating :</h4>
+                <p>DC motor temperature is a function of ventilation and electrical/mechanical losses in the machine. Some DC motors feature losses, such as core, shunt- field, and brush- friction losses, which are independent of load, but vary with speed and excitation.<br><br>The best method to predict a given DC motor's operating temperature is to use thermal capability curves available from the DC motor manufacturer. If curves are not available, DC motor temperature can be estimated by the power - loss method. This method requires total losses versus load curve or an efficiency curve. <br><br>For each portion of the duty cycle, power loss is obtained and multiplied by the duration of that portion of the cycle. The summation of these products divided by the total cycle time gives the DC motor's average power loss. The ratio of this value to the power loss at the motor rating is multiplied by the DC motor's rated temperature rise to give the approximate temperature rise of the DC motor when operated on that dutycycle.</p>
+                <img style="max-width: 90%;" src="img/dcmotor-cross.PNG" alt="">
+                <p>Direct current machines are energy transfer devices. These machines can function as either a motor or a generator. DC motors and generators have the same basic construction, differing primarily in the energy conversion.<br><br> To better understand the operation and construction of DC machines, a few basic terms and purpose of each of the following components of a DC machine:</p>
+                <p style="font-weight: bold;">1. Armature:</p>
+                <p>The purpose of the armature is to provide the energy conversion in a DC machine. In a DC generator, the armature is rotated by an external mechanical force, such as a steam turbine. This rotation induces a voltage and current flow in the armature. Thus, the armature converts mechanical energy to electrical energy. In a DC motor, the armature receives voltage from an outside electrical source and converts electrical energy into mechanical energy in the form of torque.</p>
+                <p style="font-weight: bold;">2. Rotor:</p>
+                <p>The purpose of the rotor is to provide the rotating element in a DC machine. In a DC generator, the rotor is the component that is rotated by an external force. In a DC motor, the rotor is the component that turns a piece of equipment. In both types of DCmachines, the rotor is the armature.</p>
+                <img style="max-width: 60%;" src="img/rotor.webp" alt="">
+                <p style="font-weight: bold;">3. Stator:</p>
+                <p>The stator is the part of a motor or generator that is stationary. In DC machines, the purpose of the stator is to provide the magnetic field. The stator is provided by a permanent magnet. Stator with Yoke</p>
+                <img style="max-width: 60%;" src="img/stator.jpg" alt="">
+                <p style="font-weight: bold;">4. Field:</p>
+                <p>The purpose of the field in a DC machine is to provide a magnetic field for producing either a voltage (generator) or a torque (motor). The field in a DC machine is produced by either a permanent magnet or an electromagnet. Normally, electromagnets are used because they have an increased magnetic strength, and the magnetic strength is more easily varied using external devices. In Figure 4 and 5 the field is provided by the stator.</p>
+                <h3>Principle of DC Machine :</h3>
+                <p>It is based on the principle that when a current-carrying conductor is placed in a magnetic field, it experiences a mechanical force whose direction is given by Fleming's Left-hand rule and whose magnitude is given by:</p>
+                <p>Force, <b><em>F = BxIxL</em></b></p>
+                <p>Where, <b><em>B</em></b> is the magnetic field in weber/m<sup>2</sup>, <b><em>I</em></b> is the current in amperes and <b><em>L</em></b> is the length of the coil in meter.</p>
+                <p>The force, current and the magnetic field are all in different directions. Poles of a magnet, an upward force will move one wire up and a downward force will move the other wire down. So the wire does not get twisted. This arrangement also makes sure that at the current always passes down on the right and back on the left so that the rotation continues. This if electric current flows through two copper wires that are between this how a simple electric motor is made.</p>
+                <p>A DC machine can operate as a motor or as a generator. This kind of machine is usually realized as an internal rotor/external-pole machine. The ring-coat-shaped housing of the machine is also used as a magnetic yoke for the magnetic field through the armature and poles. The excitation winding (field winding) is located directly on the main poles of the stator. A current that flows in this winding generates the main field. Since the machine is operated with DC current the magnetic field in the stator is constant and so all iron parts of the stator can be made of massive material. Nevertheless the main poles and the commutating poles are often laminated because of easier manufacture. Modern DC machines, used in closed-loop controlled drives, with a fast change in armature current and main field consist of one completely laminated magnetic circuit. A massive iron construction would strongly in sequence the dynamics and the efficiency of the machine due to the appearance of eddy currents. The rotating part of the machine holds on its shaft the armature with the commutator. Since the alternating flux flows through the armature, iron parts must be built from laminated mutually insulated and slotted magnetic steel sheets. The coils of the armature winding are placed in the slots; their ends are connected to the commutator segments. The current is fed into the commutator by carbon brushes. As the rotor revolves, conductors revolve with it. The brushes contact the commutator segments.</p>
+                <h3>Operating behaviour of the DC machine:</h3>
+                <p>In sequence This result in a constant direction of the armature held due to the commutation. The magnetic flux of the armature is ideally vertical to the direction of the main held. Due to this coagulation there is no induced voltage at the turn connected to brushes. This area is called the neutral zone. When the load of the machine increases, the armature held is no more collectible and causes a shift of the neutral zone because of the superposition of main field and Armature field: The main field is distorted and (because of the effects of saturation) weakened. This interference between the main field and the armature cross field, which causes a loss of torque, can be reduced using a compensating winding in the stator of the DC machine. The conductors of this compensating winding are arranged in axial slots of the main pole. The compensating winding is connected in series to the armature, so that the total magnetic flux under one pole with compensating conductors and armature conductors create no magnetic field transverse to the main pole. The shift of the neutral zone also causes brush are because commutation doesn't take place in the neutral zone anymore: the windings carry an induced voltage greater than zero when short-circuited by the commutator. This results in faster deterioration of the commutator. Large machines are therefore equipped with additional commutating poles. Their coils are connected in series to the armature winding. <br><br>The commutating poles generate a counter field in the area of the short-circuited armature conductor in such a way that voltages induced by this field compensate the ones resulting from the commutation of the armature currents, so that a commutating free of sparks is achieved.</p>
+                <img style="max-width: 90%;" src="img/commutator.PNG" alt="">
+                <h3>Torque of DC motor :</h3>
+                <p>When a current carrying current is placed in the magnetic field a force is exerted or it exerts turning movement or torque Fr. This torque is produced due to electromagnetic effect hence is called electromagnetic torque.</p>
+                <p>Since, <br><br><b><em>V = E<sub>b</sub> + I<sub>a</sub>Ra</em></b> <br><br>Multiplying both side by <b><em>I<sub>a</sub></em></b>, we get, <br><br><b><em>VI<sub>a</sub> = E<sub>b</sub>I<sub>a</sub> + I<sub>a</sub><sup>2</sup>Ra</em></b></p>
+                <p>i.e., Total electrical power = Mechanical power developed. <br><br>Supplied to the armature by the armature = Losses due to armature resistance. So, we can say that</p>
+                <p>Pm = Mechanical power developed by the armature = <b><em>F<sub>b</sub> I<sub>a</sub></em></b></p>
+                <p>Also the mechanical power rotating armature can be given in terms of torque T and speed n. <br><br>i.e., <em><b>Pm = 2 nT</em></b> <br><br>Where, n in rps, T in newton-meter. Hence, <br><br><em><b>2 nT = E<sub>b</sub> I<sub>a</sub> or T = E<sub>b</sub> I<sub>a</sub> / 2n</em></b></p>
+                <p>But Eb = ZNP/60A, where N, speed in rpm. Or N/60 = n speed in rps.</p>
+                <p><b><em>Eb = Zn P/A</b></em></p>
+                <p>So torque, <b><em>T = (ZP/2 A)I<sub>a</sub></b></em></p>
+                <p>For a particular DC motor, the no of poles (P); no of conductor per parallel path.(Z/A) are constant.</p>
+                <p><b><em>T = K I<sub>a</sub>, where K=ZP/2 A</b></em></p>
+                <p>Thus we conclude that torque produced in the armature is directly proportional to flux per pole and armature current, moreover, the direction of electromagnetic torque developed in the armature depends upon the current in armature conductors. If either of the two is reversed the direction of torque produced is reversed and hence the direction of rotation. But when both are reversed and direction of torque does not change.</p> 
+                <h3>DC motor classification:</h3>
+                <p>DC motor can be classified into two ways on the basis of their field execution as:</p>
+                <h4>Separately exited DC motor:</h4>
+                <p>The conventional diagram of separately excited DC motor is shown in figure below, its voltage equation will be;</p>
+                <p><b><em>E<sub>b</sub> = V-I<sub>a</sub> R<sub>a</sub> - 2V<sub>b</sub></em></b></p>
+                <img style="max-width: 60%;" src="img/seperate-exited-dcmotor.png" alt="">
+                <p>A DC motor whose field winding is supplied current from an external DC source.</p>
+                <h4>Self Excited DC Motor :</h4>
+                <p>A DC motor whose field winding is supplied current by the motor itself is called self exited DC motor. Self excited DC motors can be divided into three classes, designated according to the method of connecting the armature and the field windings as:</p>
+                <p style="font-weight: bold;">1. Shunt-Wound Motors:</p>
+                <p>This type of motor runs practically a constant speed, regardless of the load. It is the type generally used in commercial practice and is usually recommended where starting conditions are not usually severs. Speed of the shunt-wound motors may be regulated in two ways: first, by inserting resistance in series with the armature, thus decreasing speed: and second, by inserting resistance in the field circuit, the speed will vary with each change in load: in the latter, the speed is practically constant for any setting of the controller. This latter is the most generally used for adjustable-speed service, as in the case of machine tools. The shunt motor is probably the most common DC motor used in industry today. Components of the shunt motor are the armature, labeled A1 and A2, and the field, labeled F1 and F2. The coils in the shunt field are composed of many turns of small wire, resulting in low shunt field current and moderate armature current. This motor provides starting torque that varies with the load applied and good speed regulation by controlling the shunt field voltage. If the shunt motor loses it’s field it will accelerate slightly until EMF rises to a value sufficient to shut off the torque producing current. In other words, the shunt motor will not destroy itself if it loses its field, but it won’t have the torque required to do the job it was designed for.</p>
+                <img style="max-width: 60%;" src="img/shunt-motor.png" alt="">
+                <p>Some of the common uses of the shunt motor are machine shop lathes, and industry process lines where speed and tension control are critical.</p>
+                <p style="font-weight: bold;">Important relations in DC Shunt Wound Motor is:</p>
+                <p><b><em>I<sub>sh</sub> = V/R<sub>sh</sub></em></b></p>
+                <p><b><em>I<sub>a</sub> = IL - I<sub>sh</sub></em></b></p>
+                <p><b><em>E<sub>b</sub> = V- I<sub>a</sub> R<sub>a</sub> -2V<sub>b</sub></em></b></p>
+                <p style="font-weight: bold;">2. Series -Wound Motors:</p>
+                <p>This type of motor speed varies automatically with the load, increasing as the load decreases. Use of series motor is generally limited to case where a heavy power demand is necessary to bring the machine up to speed, as in the case of certain elevator and hoist installations, for steel cars, etc. Series- wound motors should never be used where the motor can be started without load, since they will race to a dangerous degree. Components of a series motor include the armature, labeled A1 and A2, and the field, S1 and S2. The same current is impressed upon the armature and the series field <br><br> The coils in the series field are made of a few turns of large gauge wire, to facilitate large current flow. This provides high starting torque, approximately 2¼ times the rated load torque. Series motor armatures are usually lap wound. Lap windings are good for high current, low voltage applications because they have additional parallel paths for current flow. Series motors have very poor speed control, running slowly with heavy loads and quickly with light loads. A series motor should never drive machines with a belt. If the belt breaks, the load would be removed and cause the motor to over speed and destroy itself in a matter of seconds.</p>
+                <img style="max-width: 60%;" src="img/series-motor.png" alt="">
+                <p>Common uses of the series motor include crane hoists, where large heavy loads will be raised and lowered and bridge and trolley drives on large overhead cranes. The series motor provides the starting torque required for moving large loads.</p>
+                
+              </div>
+          <!-- SIMULATION under development -->
+          <div class="actionContainer">
+            <a href="simulations/index.html"><button class="viewSimulation">Simulation</button></a>
+          </div>
+        </div>
+      </div> 
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+  
+>>>>>>> fa62b5152a26f816d085c17bebb7bd3c80055358
   <script src="renderer.js"></script>
 </body>
 </html>
