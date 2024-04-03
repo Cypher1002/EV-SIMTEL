@@ -1,6 +1,6 @@
 
 #left-menu{
-  width: AUTO;
+  width: 80%;
   background: white;
   margin: 25px;
   border: 2px solid black;
@@ -24,14 +24,19 @@
 }
 
 #left-menu ol {
-  list-style: none;
   margin: 0;
-  padding: 0;
+}
+
+.menuItemContainer {
+  width: 100%;
 }
 
 .menuItem {
-  list-style: none;
+  background: #00988e;
+  color: white;
+  display: block;
   margin: 20px 0;
+  margin-bottom: 0;
   padding: 10px 15px;
   border: 2px solid black;
   border-radius: 8px;
@@ -50,14 +55,11 @@
   margin-bottom: 0;
 }
 
-#right-menu{
-  width: 80%;
-  margin-right: 25px;
-  background: white;
-  margin: 25px 25px 25px 0;
-  border: 2px solid black;
-  border-radius: 14px;
-  padding: 15px;
+
+.sub-menu ol{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sub-menu a{
@@ -68,8 +70,7 @@
 
 .sub-menu a:hover {
   text-decoration: underline;
-  color: white;
-
+  
 }
 
 .sub-menu li {
@@ -79,15 +80,14 @@
 
 .sub-menu li:hover{
   text-decoration: underline;
-  color: white;
 }
 
 .sub-menu {
+  /* display: none; */
   background: #00988e;
-  border: 2px solid;
-  border-top: 0;
-  display: none;
   transition: 0.2s ease-in-out;
+  border: 2px solid black;
+  border-top: 0px;
   margin: 0 20px;
   padding: 10px 0;
   border-radius: 0 0 20px 20px;

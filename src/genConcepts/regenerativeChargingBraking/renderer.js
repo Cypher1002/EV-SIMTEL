@@ -57,7 +57,7 @@ function componentActive(button){
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("exit-pdf").addEventListener("click", function(){
-        document.getElementById(currentWindow).style.display = "block";
+        document.getElementById(currentWindow).style.display = "flex";
         document.getElementById("pdfContent").style.display = "none";
         document.getElementById('pdf-viewer').innerHTML = '';
     });
